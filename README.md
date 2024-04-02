@@ -12,38 +12,15 @@ npm|pnpm|yarn add express-accept-events
 
 ## Usage
 
-**Express-Accept-Events** provides a factory function to create a middleware to parse the `Accept-Events` header field. The factory can be configured to specify if a a given URL path supports notifications and if a particular notification protocol is supported on a given URL path.
+In case one is using an Express server:
 
 ```js
 import AcceptEvents from "express-accept-events";
-
-const acceptEvents = AcceptEvents({
-  // true if a particular protocol is supported on a route
-  protocols(protocol, url) {
-    if (url === "/notifications") {
-      return protocol === "solid";
-    }
-    else {
-      return protocol === "prep";
-    }
-  }
-  // true if route supports notifications
-  urls() {
-    // notifications are sent on all paths except those begining with 'static'
-    return !urls.startsWith("/static/");
-  }
-})
-```
-
-Now you are ready to invoke the middleware in your server. In case one is using an Express server:
-
-```js
 const app = express();
-
 app.use(acceptEvents);
 ```
 
-The middleware populates `req.acceptEvents` with a list of notification protocols and their corresponding parameters (sorted by the value of a `q` parameter, if provided). For Example, the following HTTP request:
+The middleware populates `req.acceptEvents` with a list of notification protocols and their corresponding parameters (sorted by the value of a `q` parameter, if provided) in `GET` and `POST` requests. For Example, the following HTTP request:
 
 ```http
 GET /notifications HTTP/1.1
