@@ -1,6 +1,6 @@
 {
   "name": "express-accept-events",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Connect/Express style middleware for parsing the Accept-Events header",
   "keywords": [
     "accept-events",
