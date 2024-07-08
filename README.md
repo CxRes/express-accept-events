@@ -1,13 +1,13 @@
-# Express-Accept-Events
+# Express Accept Events
 
 A Connect/Express style middleware to parse the `Accept-Events` header field specified in [Per Resource Events](https://cxres.github.io/prep/draft-gupta-httpbis-per-resource-events.html).
 
 ## Installation
 
-Install **Express-Accept-Events** using your favourite package manager.
+Install **Express Accept Events** using your favourite package manager.
 
 ```sh
-npm|pnpm|yarn add express-accept-events
+npm|pnpm|yarn|bun add express-accept-events
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ Accept-Events: "prep"; accept="message/rfc822"; q=0.9, "solid"; type="WebSocket2
 with the GET handler, so specified:
 
 ```js
-app.get('/foo', (req, res) => {
+app.get("/foo", (req, res) => {
   console.log(req.acceptEvents);
 });
 ```
@@ -52,6 +52,6 @@ In case the middleware fails to parse the `Accept-Events` header field, the `req
 
 ## Copyright and License
 
-Copyright © 2024, [Rahul Gupta](https://cxres.pages.dev/profile#i)
+Copyright © 2024, [Rahul Gupta](https://cxres.pages.dev/profile#i) and Express Accept Events contributors.
 
 The source code in this repository is released under the [Mozilla Public License v2.0](./LICENSE).

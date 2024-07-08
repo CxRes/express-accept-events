@@ -1,7 +1,7 @@
 {
   "name": "express-accept-events",
   "version": "0.2.1",
-  "description": "A Connect/Express style middleware for parsing the Accept-Events header",
+  "description": "A Connect/Express style middleware for parsing the Accept-Events header field",
   "keywords": [
     "accept-events",
     "events",
@@ -11,23 +11,47 @@
   ],
   "author": "Rahul Gupta",
   "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CxRes/express-accept-events.git"
+  },
   "type": "module",
   "main": "src/index.js",
   "exports": "./src/index.js",
   "dependencies": {
-    "debug": "^4.3.4",
-    "no-try": "^3.1.0",
+    "debug": "^4.3.5",
+    "no-try": "^4.0.0",
     "structured-field-utils": "1.1.0-nested-sf.0",
     "structured-headers": "npm:@cxres/structured-headers@2.0.0-alpha.1-nesting.0"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.6.0",
+    "cspell": "^8.10.4",
+    "dedent": "^1.5.3",
+    "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
-    "globals": "^14.0.0",
-    "prettier": "^3.2.5"
+    "globals": "^15.8.0",
+    "headright": "^0.1.1",
+    "husky": "^9.0.11",
+    "knip": "^5.24.4",
+    "lint-staged": "^15.2.7",
+    "parse-gitignore": "^2.0.0",
+    "prettier": "^3.3.2"
   },
   "scripts": {
-    "lint": "eslint . && prettier *.js .*rc src/** --check",
+    "format": "prettier * --check",
+    "header": "hr --dry --verbose \"**\"",
+    "header:modify": "hr --verbose \"**\"",
+    "lint": "pnpm run --reporter=append-only --aggregate-output \"/(^lint:.*|format)/\"",
+    "lint:code": "eslint .",
+    "lint:header": "hr --dry \"**\"",
+    "lint:knip": "knip",
+    "lint:packages": "pnpm dedupe --check --silent",
+    "lint:spelling": "cspell --dot --quiet \"**\"",
+    "prepare": "node .husky/install.js",
     "prepublishOnly": "pnpm run lint"
   }
 }
