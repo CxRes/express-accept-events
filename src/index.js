@@ -8,7 +8,7 @@
  *  SPDX-License-Identifier: MPL-2.0
  */
 import { useTry } from "no-try";
-import { parseList } from "structured-headers";
+import { parseList, Token } from "structured-headers";
 import { item } from "structured-field-utils";
 
 import Debug from "debug";
@@ -45,8 +45,8 @@ function acceptEventsMiddleware(req, res, next) {
 
     // Rationalize protocols as strings or remove
     const acceptEvents = acceptEventsH
-      .map((li) => [li[0]?.toString(), li[1]])
-      .filter((li) => li[0]);
+      .filter((li) => typeof li[0] === "string" || li[0] instanceof Token)
+      .map((li) => [li[0].toString(), li[1]]);
     if (acceptEvents.length === 0) {
       debug("No Protocols specified in the Accept Events Header");
       return next && next();
