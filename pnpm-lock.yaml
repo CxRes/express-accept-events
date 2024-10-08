@@ -15,11 +15,11 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       structured-field-utils:
-        specifier: 1.1.0-nested-sf.0
-        version: 1.1.0-nested-sf.0
+        specifier: 1.2.0-nested-sf.0
+        version: 1.2.0-nested-sf.0
       structured-headers:
-        specifier: npm:@cxres/structured-headers@2.0.0-alpha.1-nesting.0
-        version: '@cxres/structured-headers@2.0.0-alpha.1-nesting.0'
+        specifier: npm:@cxres/structured-headers@2.0.0-nesting.0
+        version: '@cxres/structured-headers@2.0.0-nesting.0'
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.5.0
@@ -387,8 +387,8 @@ packages:
     resolution: {integrity: sha512-htHhNF8WrM/NfaLSWuTYw0NqVgFRVHYSyHlRT3i/Yv5xvErld8Gw7C6ldm+0TLjoGlUe6X1VV72JSir7+yLp/Q==}
     engines: {node: '>=18.0'}
 
-  '@cxres/structured-headers@2.0.0-alpha.1-nesting.0':
-    resolution: {integrity: sha512-MYHRF2oS3Zvumh3swXs//GDGNe6L+sYnwplitC8Ns8CFQro+WKCidDrgk+suLq2Wm6e0ohIvEWqB8VM1mqbR8g==}
+  '@cxres/structured-headers@2.0.0-nesting.0':
+    resolution: {integrity: sha512-zW8AF/CXaxGe0B1KCj/QEY88Hqxh6xZ9i98UHqCFZZa/QgYGYJD9Z40/h+UZsrYi/ZW/VQVQhObB5Zegd/MDZQ==}
     engines: {node: '>=18', npm: '>=6'}
 
   '@esbuild/aix-ppc64@0.21.5':
@@ -1997,8 +1997,8 @@ packages:
     resolution: {integrity: sha512-0fk9zBqO67Nq5M/m45qHCJxylV/DhBlIOVExqgOMiCCrzrhU6tCibRXNqE3jwJLftzE9SNuZtYbpzcO+i9FiKw==}
     engines: {node: '>=14.16'}
 
-  structured-field-utils@1.1.0-nested-sf.0:
-    resolution: {integrity: sha512-fISHrNmYK9c1PZFxQdMPG19d3uVv1lXwiW9MkKEjjU8SWkpfPWMXmYt7Pw3lt7TshOjPauO8EgTgcu85qMga9g==}
+  structured-field-utils@1.2.0-nested-sf.0:
+    resolution: {integrity: sha512-fK/2PzGf152UCgjpWBesQuUanOQ+f08r4LMe7GugIzs7KfnNyDspDZTaWixf36TO+Df5eq4z1Z0EB3t4Wc7yNQ==}
 
   summary@2.1.0:
     resolution: {integrity: sha512-nMIjMrd5Z2nuB2RZCKJfFMjgS3fygbeyGk9PxPPaJR1RIcyN9yn4A63Isovzm3ZtQuEkLBVgMdPup8UeLH7aQw==}
@@ -2579,7 +2579,7 @@ snapshots:
 
   '@cspell/url@8.14.4': {}
 
-  '@cxres/structured-headers@2.0.0-alpha.1-nesting.0': {}
+  '@cxres/structured-headers@2.0.0-nesting.0': {}
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
@@ -4124,9 +4124,9 @@ snapshots:
 
   strip-json-comments@5.0.1: {}
 
-  structured-field-utils@1.1.0-nested-sf.0:
+  structured-field-utils@1.2.0-nested-sf.0:
     dependencies:
-      structured-headers: '@cxres/structured-headers@2.0.0-alpha.1-nesting.0'
+      structured-headers: '@cxres/structured-headers@2.0.0-nesting.0'
 
   summary@2.1.0: {}
 

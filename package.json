@@ -1,6 +1,6 @@
 {
   "name": "express-accept-events",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A Connect/Express style middleware for parsing the Accept-Events header field",
   "keywords": [
     "accept-events",
@@ -21,8 +21,8 @@
   "dependencies": {
     "debug": "^4.3.5",
     "no-try": "^4.0.0",
-    "structured-field-utils": "1.1.0-nested-sf.0",
-    "structured-headers": "npm:@cxres/structured-headers@2.0.0-alpha.1-nesting.0"
+    "structured-field-utils": "1.2.0-nested-sf.0",
+    "structured-headers": "npm:@cxres/structured-headers@2.0.0-nesting.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
